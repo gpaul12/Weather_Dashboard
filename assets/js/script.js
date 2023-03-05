@@ -59,7 +59,18 @@ searchButton.click(function () {
             url: urlFiveDay,
             method: "GET"
         }).then(function (response) {
+            var day = [0, 8, 16, 24, 32];
+            var fiveDayCard = $(".fiveDayCard").addClass("card-body");
+            var fiveDayDiv = $(".fiveDayOne").addClass("card-text");
+            fiveDayDiv.empty();
             
+            day.forEach(function (i) {
+                var fiveDayTimeUTC1 = new Date(response.list[i].dt * 1000);
+                fiveDayTimeUTC1 = fiveDayTimeUTC1.toLocaleDateString("en-US");
+
+                fiveDayDiv.append("<div class=fiveDayColor>" + "<p>" + fiveDayTimeUTC1 + "</p>" + '<img src="https://openweathermap.org/img/wn/${response.list[i].weather[0].icon}@2x.png">' + "<p>" + "Temperature: " + response.list[i].main.temp + "</p>" + "Humidity: " + response.list[i].main.humidity + "%" + "</p>" + "</div>");
+                
+            })
         })
     }
 })
