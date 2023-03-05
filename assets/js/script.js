@@ -10,3 +10,6 @@ for (var i = 0; i < localStorage.length; i++) {
 
 var keyCount = 0;
 
+searchButton.click(function () {
+    var searchInput = $(".searchInput").val();
+})
