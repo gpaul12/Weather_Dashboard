@@ -46,7 +46,15 @@ searchButton.click(function () {
 
             var urlUV = `https://api.openweathermap.org/data/2.5/uvi?appid=b8ecb570e32c2e5042581abd004b71bb&lat=${response.coord.lat}&lon=${response.coord.lon}`;
 
-
-        })
+            $.ajax({
+                url: urlUV,
+                method: "GET"
+            }).then(function (response) {
+                var currentUV = currentTemp.append("<p>" + "UV Index: " + response.value + "</p>").addClass("card-text");
+                currentUV.addClass("UV");
+                currentTemp.append(currentUV);
+            });
+        });
+        
     }
 })
