@@ -55,6 +55,11 @@ searchButton.click(function () {
                 currentTemp.append(currentUV);
             });
         });
-        
+        $.ajax({
+            url: urlFiveDay,
+            method: "GET"
+        }).then(function (response) {
+            
+        })
     }
 })
