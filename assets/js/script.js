@@ -40,6 +40,10 @@ searchButton.click(function () {
             currentName.append(currentTemp);
             currentTemp.append("<p>" + "Temperature: " + response.main.temp + "</p>");
 
+            currentTemp.append("<p>" + "Humidity: " + response.main.humidity + "%" + "</p>");
+
+            
+
         })
     }
 })
