@@ -35,6 +35,9 @@ searchButton.click(function () {
             var timeUTC = new Date(response.dt * 1000);
             currentName.append(response.name + " " + timeUTC.toLocaleDateString("en-US"));
             currentName.append(`<img src="https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png">`);
+
+            var currentTemp = currentName.append("<p>");
+
             
         })
     }
