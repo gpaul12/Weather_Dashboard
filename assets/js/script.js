@@ -26,6 +26,13 @@ searchButton.click(function () {
 
             var local = localStorage.setItem(keyCount, response.name);
             keyCount = keyCount + 1;
+
+            var currentCard = $(".currentCard").append("<div>").addClass("card-body");
+            currentCard.empty();
+            var currentName = currentCard.append("<p>");
+            currentCard.append(currentName);
+
+            
         })
     }
 })
