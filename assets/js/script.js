@@ -23,6 +23,9 @@ searchButton.click(function () {
         }).then(function (response) {
             var cityName = $(".list-group").addClass("list-group-item");
             cityName.append("<li>" + response.name + "</li>");
+
+            var local = localStorage.setItem(keyCount, response.name);
+            keyCount = keyCount + 1;
         })
     }
 })
