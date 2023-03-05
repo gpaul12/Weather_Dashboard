@@ -8,3 +8,5 @@ for (var i = 0; i < localStorage.length; i++) {
    cityName.append("<li>" + city + "</li>");
 }
 
+var keyCount = 0;
+
