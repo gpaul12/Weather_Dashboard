@@ -42,6 +42,8 @@ searchButton.click(function () {
 
             currentTemp.append("<p>" + "Humidity: " + response.main.humidity + "%" + "</p>");
 
+            currentTemp.append("<p>" + "Wind Speed: " + response.wind.speed + "</p>");
+
             
 
         })
