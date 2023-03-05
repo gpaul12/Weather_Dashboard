@@ -4,6 +4,8 @@
 - ['Weather-Dashboard - Github IO'](https://gpaul12.github.io/Weather_Dashboard/)
 - ['Weather-Dashboard - Demo'](https://drive.google.com/file/d/10hnC65jepZ7tNH-5OLwnqjBxXv--bRtr/view)
 
+![Weather-Dashboard Demo](/assets/Demo/Weather%20Dashboard.gif)
+
 ### Summary
 
 - HTML and CSS and Javascript documents create a weather application
